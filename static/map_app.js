@@ -1,4 +1,4 @@
-d3.json("http://127.0.0.1:5000//titles").then(function(details) {
+d3.json("/titles").then(function(details) {
     
 
     mapboxgl.accessToken = 'pk.eyJ1IjoidGhpZW5hbmdpYW8iLCJhIjoiY2twM3NoMzYzMWp3YjJ3dGFqcjRubzJxeCJ9.m3xA8TgUpzdbFjLLeOBnMg';

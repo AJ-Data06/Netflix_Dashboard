@@ -38,7 +38,7 @@ function makeResponsive() {
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
   // Read CSV
-  d3.json("http://127.0.0.1:5000//release").then(function(medalData) {
+  d3.json("/release").then(function(medalData) {
 
       // create date parser
       var dateParser = d3.timeParse("%Y");

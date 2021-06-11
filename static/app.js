@@ -25,7 +25,7 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${chartMargin.left}, ${chartMargin.top})`);
 
 // Load data
-d3.json("http://127.0.0.1:5000//titles").then(function (tvData) {
+d3.json("/titles").then(function (tvData) {
   console.log(tvData);
 
   // Cast the hours value to a number for each piece of tvData
