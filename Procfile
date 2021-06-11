@@ -1,1 +1,1 @@
-web: app:app
+web: gunicorn Netflix_Dashboard.app:app
