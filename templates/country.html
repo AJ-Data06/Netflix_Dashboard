@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Movies/Shows Made per Country</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
-<link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <title>Netflix Data</title>
+  <!-- <link rel="stylesheet" href="/static/style1.css"> -->
+  <link rel="stylesheet" href="/static/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" media="screen" href="Resources/styles.css"/>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
-<style>
-body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
 </head>
 <body>
 
-<!--Nav Bar-->
-<nav class="navbar navbar-default">
+  <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -52,7 +45,7 @@ body { margin: 0; padding: 0; }
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="temperature.html">Countries</a>
+                            <a href="http://127.0.0.1:5000/country">Countries</a>
                         </li>
                         <li>
                             <a href="http://127.0.0.1:5000">Release Year</a>
@@ -78,57 +71,9 @@ body { margin: 0; padding: 0; }
     </div>
     <!-- /.container-fluid -->
 </nav>
-<style>
-    .map-overlay {
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    position: absolute;
-    width: 15%;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    }
-
-    .map-overlay .map-overlay-inner {
-    background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-    padding: 10px;
-    margin-bottom: 10px;
-    }
-
-    .map-overlay .legend .bar {
-    height: 10px;
-    width: 100%;
-    background: linear-gradient(to right,rgb(170,170,255), rgb(0,0,255));
-    }
-         
-</style>
-    
-
-<!-- Load the `mapbox-gl-geocoder` plugin. -->
-<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
-<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
- 
-<!-- Promise polyfill script is required -->
-<!-- to use Mapbox GL Geocoder in IE 11. -->
-<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-
-
-<div id="map"></div>
-
-<div class="map-overlay top">
-    <div class="map-overlay-inner">
-        <div id="legend" class="legend">
-            <div class="bar"></div>
-            <div>No. of Titles</div>
-        </div>
-    </div>
-</div> 
-
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="{{url_for('static', filename='map_app.js')}}"></script>
-
-
+  <div class="chart"></div>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- <script src="{{url_for('static', filename='app.js')}}"></script> -->
+  <script src="{{url_for('static', filename='app.js')}}"></script>
 </body>
 </html>
