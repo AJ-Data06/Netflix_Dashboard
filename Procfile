@@ -1,1 +1,1 @@
-web: Netflix_Dashboard.app:app
+web: app:app
