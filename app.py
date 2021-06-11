@@ -98,6 +98,10 @@ def map():
 def country():
     return render_template("country.html")
 
+@app.route("/directors")
+def directors():
+    return render_template("directors.html")
+
 @app.route("/test", methods=["GET"])
 def welcome():
     """List all available api routes."""
